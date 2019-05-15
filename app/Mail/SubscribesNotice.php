@@ -30,6 +30,12 @@ class SubscribesNotice extends Mailable
         $this->hotest = Product::orderBy('safe_count', 'desc')->first();
         $this->likest = Product::withCount('users')->orderBy('users_count', 'desc')->first();
 
+
+
+
+
+
+        
         return $this->markdown('emails.subscribes');
     }
 }
